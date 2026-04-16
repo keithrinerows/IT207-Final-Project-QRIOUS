@@ -12,7 +12,7 @@ $quiz_id = intval($_GET['id']);
 $userName = $_SESSION['fullname'] ?? $_SESSION['username'] ?? 'Admin';
 
 // --- LOGIC: DELETE QUESTION ---
-if (isset($_GET['delete_qid'])) {
+if (!empty($_GET['delete_qid'])) {
     $delete_id = intval($_GET['delete_qid']);
     $del_stmt = $conn->prepare("DELETE FROM questions WHERE id = ? AND quiz_id = ?");
     $del_stmt->bind_param("ii", $delete_id, $quiz_id);
