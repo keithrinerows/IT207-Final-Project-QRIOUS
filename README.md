@@ -18,15 +18,15 @@ An interactive web-based quiz management system designed for efficient academic 
 
 ### 🛡️ Admin Dashboard
 *Management interface for system administrators.*
-![Admin Dashboard](admindash.jpg)
+![Admin Dashboard](admindash.jpeg)
 
 ### 🎓 Instructor Dashboard
 *Interface for creating and managing quiz content.*
-![Instructor Dashboard](insdash.jpg)
+![Instructor Dashboard](insdash.jpeg)
 
 ### ✍️ Student Dashboard
 *The portal for participants to access their assessments.*
-![Student Dashboard](student%20dashboard.jpg)
+![Student Dashboard](student%20dashboard.jpeg)
 
 ## 👥 Contributors (Group 4)
 * **Keithrine Rose Soriano** - Project Lead / Developer
