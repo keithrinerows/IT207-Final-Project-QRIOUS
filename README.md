@@ -1,6 +1,6 @@
 # Q-RIOUS Quiz Management System
 
-An interactive web-based quiz management system designed for efficient academic assessments. This project features a "soft-pink glass-vibe" aesthetic for a modern user experience.
+An interactive web-based quiz management system designed for efficient academic assessments. 
 
 ## 🚀 Features
 * **Admin Module:** Manage users and monitor system activity.
@@ -29,7 +29,7 @@ An interactive web-based quiz management system designed for efficient academic 
 ![Student Dashboard](student%20dashboard.jpeg)
 
 ## 👥 Contributors (Group 4)
-* **Keithrine Rose Soriano** - Project Lead / Developer
+* **Keithrine Rose Soriano** 
 * **Megan Maningas**
 * **Allena Villarama**
 * **Nichole Geguilasao**
