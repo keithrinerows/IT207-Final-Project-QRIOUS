@@ -10,6 +10,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'Instructor') {
     exit;
 }
 
+// Retrieve specific quiz metadata (title and question counts)
 $quiz_id = isset($_GET['quiz_id']) ? intval($_GET['quiz_id']) : 0;
 
 if ($quiz_id == 0) {
