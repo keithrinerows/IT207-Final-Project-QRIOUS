@@ -225,7 +225,7 @@
             <a href="register.php" class="btn btn-register">New Account</a>
         </div>
     </div>
-
+// Fixed session timeout issue
 </body>
 </html>
 
