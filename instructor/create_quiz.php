@@ -48,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['btn_proceed'])) {
                     )";
             
             if (mysqli_query($conn, $sql)) {
+                // Get the ID of the newly created quiz record to link questions in the next step
                 $new_quiz_id = mysqli_insert_id($conn);
                 header("Location: add_questions_instructor.php?quiz_id=" . $new_quiz_id);
                 exit();
