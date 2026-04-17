@@ -11,6 +11,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'Admin') {
     exit;
 }
 
+// Initialize user context for the header and creator identification
 $userName = $_SESSION['fullname'] ?? $_SESSION['username'] ?? 'Admin';
 $admin_id = $_SESSION['user_id'] ?? 0;
 
@@ -59,6 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['btn_proceed'])) {
                 )";
         
         if (mysqli_query($conn, $sql)) {
+            // Retrieve the ID of the newly created quiz record
             $new_quiz_id = mysqli_insert_id($conn);
             // Redirect to add questions page
             header("Location: add_questions_admin.php?quiz_id=" . $new_quiz_id);
