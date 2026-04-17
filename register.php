@@ -5,6 +5,7 @@ require_once 'dbconnect.php';
 $error_msg = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Sanitize user inputs to ensure data integrity
     $fullname = mysqli_real_escape_string($conn, trim($_POST['fullname']));
     $username = mysqli_real_escape_string($conn, trim($_POST['username']));
     $password = mysqli_real_escape_string($conn, trim($_POST['password']));
@@ -18,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mysqli_num_rows($runCheck) > 0) {
         $error_msg = "⚠ USERNAME ALREADY TAKEN!";
     } else {
+        // Execute the insertion of the new student record
         $sql = "INSERT INTO users (fullname, username, password, section, role) 
                 VALUES ('$fullname', '$username', '$password', '$section', '$role')";
         
