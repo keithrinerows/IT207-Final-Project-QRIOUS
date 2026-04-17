@@ -18,7 +18,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = mysqli_fetch_assoc($result);
         
         // 2. IMPORTANT: Save user_id sa session
-        // Siguraduhin na 'id' ang pangalan ng column sa table mong 'users'
         $_SESSION['user_id'] = $row['id']; 
         $_SESSION['username'] = $row['username'];
         $_SESSION['role'] = $row['role'];
