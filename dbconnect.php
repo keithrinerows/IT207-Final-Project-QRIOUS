@@ -15,5 +15,6 @@ if (!$conn) {
 // Optional: Set charset to utf8 for better character support
 mysqli_set_charset($conn, "utf8");
 
-// echo "Connected successfully"; 
+// echo "Connected successfully";
+// IMPORTANT: Use environment variables for credentials in production.
 ?>
