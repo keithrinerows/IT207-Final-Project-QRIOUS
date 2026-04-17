@@ -10,6 +10,7 @@ if (!isset($_SESSION['role']) || strtolower($_SESSION['role']) !== 'admin') {
     exit;
 }
 
+// Fetch Quiz ID from URL and validate
 $quiz_id = isset($_GET['quiz_id']) ? intval($_GET['quiz_id']) : 0;
 if ($quiz_id == 0) {
     header('Location: manage_quizzes.php');
@@ -45,12 +46,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_questions'])) {
             if (empty(trim($text))) continue;
             
             $q_text = mysqli_real_escape_string($conn, trim($text));
-            
+
+            // Validation: Skip if question text is already in the database for this quiz
             if (in_array(strtolower($q_text), $existing_questions)) {
                 $errors[] = "Duplicate: " . htmlspecialchars(substr($q_text, 0, 50));
                 continue;
             }
-            
+
+            // Capture options for Multiple Choice; default to empty for other types
             $q_type = isset($_POST['type'][$idx]) ? mysqli_real_escape_string($conn, $_POST['type'][$idx]) : 'Short Answer';
             $correct = isset($_POST['correct'][$idx]) ? mysqli_real_escape_string($conn, $_POST['correct'][$idx]) : '';
             
